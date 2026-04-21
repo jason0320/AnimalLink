@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <JobDef>
+    <defName>InstallAnimalink</defName>
+    <driverClass>JobDriver_UseItem</driverClass>
+    <reportString>installing TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JobDef>
+    <defName>UninstallAnimalLink</defName>
+    <label>uninstall animallink</label>
+    <driverClass>panda.AnimalLink.JobDriver_UninstallAnimalLink</driverClass>
+    <reportString>removing animallink implant.</reportString>
+    <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
+    <collideWithPawns>false</collideWithPawns>
+    <playerInterruptible>true</playerInterruptible>
+    <checkOverrideOnDamage>Always</checkOverrideOnDamage>
+  </JobDef>
+
+</Defs>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F39E14EE-D8A3-46AC-A8F6-622CAE4A7F9C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>panda.AnimalLink</RootNamespace>
+    <AssemblyName>AnimalLink</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>C:\Users\User\Documents\RimWorld\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>C:\Users\User\Documents\RimWorld\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="HarmonyMod">
+      <HintPath>C:\Users\User\Documents\RimWorld\HarmonyMod.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>C:\Users\User\Documents\RimWorld\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>C:\Users\User\Documents\RimWorld\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>C:\Users\User\Documents\RimWorld\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnimalLink.cs" />
+    <Compile Include="AnimalLinkTex.cs" />
+    <Compile Include="AnimalLinkUtility.cs" />
+    <Compile Include="Init.cs" />
+    <Compile Include="Patch_AnimanitorStartImplant.cs" />
+    <Compile Include="Patch_Pawn_GetGizmos.cs" />
+    <Compile Include="Patch_Pawn_GetInspectString.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Animals_preview.png" />
+    <Content Include="Defs\HediffDefs\AnimalLinkImplant.xml" />
+    <Content Include="Defs\JobDefs\Jobs_AnimalLink.xml" />
+    <Content Include="Defs\PawnKindDefs\PawnKind_Animanitor.xml" />
+    <Content Include="Defs\RecipeDefs\InstallAnimalLinkImplant.xml" />
+    <Content Include="Defs\ScenarioDefs\Scenarios.xml" />
+    <Content Include="Defs\ThingDefs\AnimalLink.xml" />
+    <Content Include="Mechlink.png" />
+    <Content Include="preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="preview.pdn" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

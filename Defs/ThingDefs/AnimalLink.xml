@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <defName>AnimalLink</defName>
+    <label>animallink</label>
+    <description>A bionic implant that allows direct neural control of animals. Use it to have a pawn install the implant on themselves.</description>
+    <descriptionHyperlinks><HediffDef>AnimalLinkImplant</HediffDef></descriptionHyperlinks>
+    <category>Item</category>
+    <techLevel>Archotech</techLevel>
+
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Mechlink</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.65</drawSize>
+    </graphicData>
+
+    <useHitPoints>false</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>1</stackLimit>
+    <tradeability>Sellable</tradeability>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Beauty>-4</Beauty>
+      <Mass>1</Mass>
+      <MarketValue>500</MarketValue>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <comps>
+      <li Class="panda.AnimalLink.CompProperties_AnimalLink"/>
+    </comps>
+	<techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+  </ThingDef>
+
+</Defs>
