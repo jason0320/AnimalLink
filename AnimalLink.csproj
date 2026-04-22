@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimalLink.cs" />
+    <Compile Include="AnimalLinkDefOf.cs" />
     <Compile Include="CompProperties_AnimalLink.cs" />
     <Compile Include="Gizmo_AnimalLink.cs" />
     <Compile Include="Init.cs" />
@@ -72,6 +73,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="About\About.xml" />
+    <Content Include="About\preview.png" />
+    <Content Include="About\PublishedFileId.txt" />
     <Content Include="Animals_preview.png" />
     <Content Include="Defs\HediffDefs\AnimalLinkImplant.xml" />
     <Content Include="Defs\JobDefs\Jobs_AnimalLink.xml" />

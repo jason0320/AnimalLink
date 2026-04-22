@@ -57,7 +57,17 @@ namespace panda.AnimalLink
 
     public class Hediff_AnimalLinkImplant : HediffWithComps
     {
-        public const int BaseBandwidth = 6;
+        public int BaseBandwidth
+        {
+            get
+            {
+                if (pawn == null) return 0;
+
+                // Read the stat from the pawn (which includes the implant + any apparel)
+                // Stats return floats, so we round it to an int.
+                return UnityEngine.Mathf.RoundToInt(pawn.GetStatValue(AnimalLinkDefOf.AnimalBandwidth));
+            }
+        }
         public const int BaseControlGroups = 2;
 
         public int CountInGroup(int groupIndex)

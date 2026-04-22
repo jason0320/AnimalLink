@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <MainButtonDef>
+    <defName>AnimalLink</defName>
+    <label>AnimalLink</label>
+    <description>View and organize the colony's linked animals.</description>
+    <order>46</order>
+	<workerClass>panda.AnimalLink.MainButtonWorker_AnimalLink</workerClass>
+	<tabWindowClass>panda.AnimalLink.MainTabWindow_AnimalLink</tabWindowClass>    <closesWorldView>true</closesWorldView>
+  </MainButtonDef>
+
+</Defs>

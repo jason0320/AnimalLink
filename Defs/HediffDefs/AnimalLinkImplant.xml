@@ -9,14 +9,20 @@
 		<isBad>false</isBad>
 	</HediffDef>
 
-  <HediffDef ParentName="AnimalLinkHediffBase">
+  <HediffDef ParentName="ImplantHediffBase">
     <defName>AnimalLinkImplant</defName>
-    <label>animallink</label>
-    <description>
-      A bionic implant that allows direct control of animals.
-    </description>
     <hediffClass>panda.AnimalLink.Hediff_AnimalLinkImplant</hediffClass>
-	<countsAsAddedPartOrImplant>true</countsAsAddedPartOrImplant>
-    <isBad>false</isBad>
+    <description>A bionic implant that allows direct control of animals.</description>
+    <label>animallink</label>
+    <stages>
+      <li>
+        <statOffsets>
+          <AnimalBandwidth>6</AnimalBandwidth>
+        </statOffsets>
+      </li>
+    </stages>
+	  <countsAsAddedPartOrImplant>true</countsAsAddedPartOrImplant>
+	  <isBad>false</isBad>
   </HediffDef>
+
 </Defs>

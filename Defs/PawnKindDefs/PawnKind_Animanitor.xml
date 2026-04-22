@@ -18,6 +18,7 @@
       <li>Apparel_Duster</li>
       <li>Apparel_CollarShirt</li>
       <li>Apparel_Pants</li>
+      <li>Apparel_AnimanitorAirwireHeadset</li>
     </apparelRequired>
     <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
     <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>

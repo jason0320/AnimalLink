@@ -4,35 +4,37 @@
   <ThingDef ParentName="BodyPartProstheticMakeableBase">
     <defName>AnimalLink</defName>
     <label>animallink</label>
-    <description>A bionic implant that allows direct neural control of animals. Use it to have a pawn install the implant on themselves.</description>
-    <descriptionHyperlinks><HediffDef>AnimalLinkImplant</HediffDef></descriptionHyperlinks>
-    <category>Item</category>
-    <techLevel>Archotech</techLevel>
+    <description>A brain implant that allows direct control of animals.</description>
+    <descriptionHyperlinks>
+      <HediffDef>AnimalLinkImplant</HediffDef>
+    </descriptionHyperlinks>
 
-    <graphicData>
-      <texPath>Things/Pawn/Humanlike/Apparel/Mechlink</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>0.65</drawSize>
-    </graphicData>
-
-    <useHitPoints>false</useHitPoints>
-    <selectable>true</selectable>
-    <altitudeLayer>Item</altitudeLayer>
+    <techLevel>Ultra</techLevel>
     <stackLimit>1</stackLimit>
     <tradeability>Sellable</tradeability>
+
+    <useHitPoints>true</useHitPoints>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
-      <Beauty>-4</Beauty>
-      <Mass>1</Mass>
+      <Mass>0.1</Mass>
       <MarketValue>500</MarketValue>
-      <DeteriorationRate>0</DeteriorationRate>
     </statBases>
+
+    <costList>
+      <Plasteel>25</Plasteel>
+      <ComponentSpacer>5</ComponentSpacer>
+    </costList>
+
+    <recipeMaker>
+      <researchPrerequisite>Bionics</researchPrerequisite>
+      <skillRequirements>
+        <Medicine>8</Medicine>
+      </skillRequirements>
+    </recipeMaker>
+
     <comps>
       <li Class="panda.AnimalLink.CompProperties_AnimalLink"/>
     </comps>
-	<techHediffsTags>
-      <li>Advanced</li>
-    </techHediffsTags>
   </ThingDef>
 
 </Defs>

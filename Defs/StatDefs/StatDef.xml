@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <StatDef>
+    <defName>AnimalBandwidth</defName>
+    <label>animal bandwidth</label>
+    <description>How much bandwidth an animanitor has. More bandwidth allows an animanitor to link and control more animals at the same time.</description>
+    <category>PawnMisc</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <toStringStyle>Integer</toStringStyle>
+    <formatString>{0}</formatString>
+    <displayPriorityInCategory>100</displayPriorityInCategory>
+  </StatDef>
+
+</Defs>

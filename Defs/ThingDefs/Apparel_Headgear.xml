@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef Abstract="True" Name="AnimanitorHeadsetBase" ParentName="HatMakeableBase">
+    <graphicData>
+      <drawSize>0.6</drawSize>
+    </graphicData>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(0.9,0.9,0.9)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.33,0.33,0.33)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.65,0.65,0.65)</only>
+        </li>
+        <li>
+          <weight>6</weight>
+          <min>(0.3,0.3,0.3)</min>
+          <max>(0.5,0.5,0.5)</max>
+        </li>
+      </options>
+    </colorGenerator>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>TableMachining</li>
+      </recipeUsers>
+      <displayPriority>700</displayPriority>
+    </recipeMaker>
+    <tradeability>Sellable</tradeability>
+  </ThingDef>
+
+  <ThingDef ParentName="AnimanitorHeadsetBase">
+    <defName>Apparel_AnimanitorAirwireHeadset</defName>
+    <label>animanitor airwire headset</label>
+    <description>A simple head-mounted comms computer that slightly enhances a Animanitor's control bandwidth. This allows them to control more animals.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/AirwireHeadset/AirwireHeadset</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <Steel>50</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>2100</WorkToMake>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Mass>0.08</Mass>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <AnimalBandwidth>3</AnimalBandwidth>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/AirwireHeadset/AirwireHeadset</wornGraphicPath>
+      <renderSkipFlags>
+        <li>None</li>
+      </renderSkipFlags>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <scoreOffset>4</scoreOffset>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef ParentName="AnimanitorHeadsetBase">
+    <defName>Apparel_AnimanitorArrayHeadset</defName>
+    <label>animanitor array headset</label>
+    <description>A head-mounted computer and signaling array that enhances a Animanitor's control bandwidth. This allows them to control more animals.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/ArrayHeadset/ArrayHeadset</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <Steel>50</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>2100</WorkToMake>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Mass>0.08</Mass>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <AnimalBandwidth>6</AnimalBandwidth>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/ArrayHeadset/ArrayHeadset</wornGraphicPath>
+      <renderSkipFlags>
+        <li>None</li>
+      </renderSkipFlags>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <scoreOffset>4</scoreOffset>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="ApparelArmorHelmetMechanitorBase" ParentName="ApparelArmorHelmetReconBase" Abstract="True">
+    <tradeability>Sellable</tradeability>
+    <apparel>
+      <defaultOutfitTags Inherit="False">
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef ParentName="ApparelArmorHelmetMechanitorBase">
+    <defName>Apparel_AnimanitorIntegratorHeadset</defName>
+    <label>animanitor integrator headset</label>
+    <description>An advanced head-mounted computer and signaling array that dramatically enhances a Animanitor's control bandwidth. This allows the wearer to control many more animals at once.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/IntegratorHeadset/IntegratorHeadset</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.6</drawSize>
+    </graphicData>
+    <equippedStatOffsets>
+      <AnimalBandwidth>9</AnimalBandwidth>
+      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0</VacuumResistance>
+    </equippedStatOffsets>
+    <statBases>
+      <ArmorRating_Sharp>0</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0</ArmorRating_Blunt>
+      <ArmorRating_Heat>0</ArmorRating_Heat>
+      <Insulation_Cold>0</Insulation_Cold>
+      <Insulation_Heat>0</Insulation_Heat>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+      <displayPriority>510</displayPriority>
+    </recipeMaker>
+    <costList>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <ComponentSpacer>4</ComponentSpacer>
+      <Plasteel>50</Plasteel>
+      <PowerfocusChip>1</PowerfocusChip>
+    </costList>
+    <apparel>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/IntegratorHeadset/IntegratorHeadset</wornGraphicPath>
+      <renderSkipFlags>
+        <li>None</li>
+      </renderSkipFlags>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups Inherit="False">
+        <li>UpperHead</li>
+      </bodyPartGroups>
+    </apparel>
+  </ThingDef>
+
+</Defs>
