@@ -18,11 +18,67 @@
       <li>
         <statOffsets>
           <AnimalBandwidth>6</AnimalBandwidth>
+		  <AnimalControlGroups>2</AnimalControlGroups>
         </statOffsets>
       </li>
     </stages>
 	  <countsAsAddedPartOrImplant>true</countsAsAddedPartOrImplant>
 	  <isBad>false</isBad>
+  </HediffDef>
+  
+    <HediffDef>
+    <defName>AnimalControlSublinkImplant</defName>
+    <hediffClass>Hediff_Level</hediffClass>
+    <descriptionHyperlinks><ThingDef>AnimalControlSublink</ThingDef></descriptionHyperlinks>
+    <label>animal control sublink</label>
+    <description>An implant which increases a animanitor's control group count and the work speed of a animanitor's animals.\n\nThis implant can be installed up to 6 times to increase its effect.</description>
+    <defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <priceImpact>true</priceImpact>
+    <initialSeverity>1</initialSeverity> <!-- Severity is bound to level of implant -->
+    <minSeverity>0</minSeverity>
+    <maxSeverity>6</maxSeverity>
+    <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+    <levelIsQuantity>true</levelIsQuantity>
+    <duplicationAllowed>false</duplicationAllowed>
+    <stages>
+      <li>
+        <minSeverity>1</minSeverity>
+        <statOffsets>
+          <AnimalControlGroups>1</AnimalControlGroups>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>2</minSeverity>
+        <statOffsets>
+          <AnimalControlGroups>2</AnimalControlGroups>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>3</minSeverity>
+        <statOffsets>
+          <AnimalControlGroups>3</AnimalControlGroups>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>4</minSeverity>
+        <statOffsets>
+          <AnimalControlGroups>4</AnimalControlGroups>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>5</minSeverity>
+        <statOffsets>
+          <AnimalControlGroups>5</AnimalControlGroups>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>6</minSeverity>
+        <statOffsets>
+          <AnimalControlGroups>6</AnimalControlGroups>
+        </statOffsets>
+      </li>
+    </stages>
   </HediffDef>
 
 </Defs>

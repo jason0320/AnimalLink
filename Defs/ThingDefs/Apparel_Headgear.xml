@@ -122,7 +122,7 @@
     </apparel>
   </ThingDef>
 
-  <ThingDef Name="ApparelArmorHelmetMechanitorBase" ParentName="ApparelArmorHelmetReconBase" Abstract="True">
+  <ThingDef Name="ApparelArmorHelmetAnimanitorBase" ParentName="ApparelArmorHelmetReconBase" Abstract="True">
     <tradeability>Sellable</tradeability>
     <apparel>
       <defaultOutfitTags Inherit="False">
@@ -130,7 +130,7 @@
     </apparel>
   </ThingDef>
 
-  <ThingDef ParentName="ApparelArmorHelmetMechanitorBase">
+  <ThingDef ParentName="ApparelArmorHelmetAnimanitorBase">
     <defName>Apparel_AnimanitorIntegratorHeadset</defName>
     <label>animanitor integrator headset</label>
     <description>An advanced head-mounted computer and signaling array that dramatically enhances a Animanitor's control bandwidth. This allows the wearer to control many more animals at once.</description>

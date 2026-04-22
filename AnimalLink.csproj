@@ -79,10 +79,14 @@
     <Content Include="Animals_preview.png" />
     <Content Include="Defs\HediffDefs\AnimalLinkImplant.xml" />
     <Content Include="Defs\JobDefs\Jobs_AnimalLink.xml" />
+    <Content Include="Defs\MainButtonDefs\MainButtonDef_AnimalLink.xml" />
     <Content Include="Defs\PawnKindDefs\PawnKind_Animanitor.xml" />
     <Content Include="Defs\RecipeDefs\InstallAnimalLinkImplant.xml" />
     <Content Include="Defs\ScenarioDefs\Scenarios.xml" />
+    <Content Include="Defs\StatDefs\StatDef.xml" />
     <Content Include="Defs\ThingDefs\AnimalLink.xml" />
+    <Content Include="Defs\ThingDefs\Apparel_Headgear.xml" />
+    <Content Include="Defs\ThingDefs\Apparel_Packs.xml" />
     <Content Include="Mechlink.png" />
     <Content Include="preview.png" />
   </ItemGroup>

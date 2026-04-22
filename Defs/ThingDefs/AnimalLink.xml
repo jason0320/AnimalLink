@@ -37,4 +37,69 @@
     </comps>
   </ThingDef>
 
+  <!-- Control sublink -->
+  <ThingDef Abstract="True" Name="AnimalControlSublinkBase" ParentName="BodyPartProstheticMakeableBase">
+    <descriptionHyperlinks><HediffDef>AnimalControlSublinkImplant</HediffDef></descriptionHyperlinks>
+    <statBases>
+      <MaxInstallCount>3</MaxInstallCount>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="AnimalControlSublinkBase">
+    <defName>AnimalControlSublink</defName>
+    <label>animal control sublink (standard)</label>
+    <description>A neural implant which gives a animanitor an additional control group. \n\nThis standard-tier sublink can only increase the control group count up to 3. To go higher, a higher-tier sublink implant must be used.\n\nIt can be self-installed without surgery.\n\nThis implant can be installed up to 3 times to increase its effect.</description>
+    <costList>
+      <SignalChip>1</SignalChip>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+    </recipeMaker>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Implant sublink</useLabel>
+        <userMustHaveHediff>AnimalLinkImplant</userMustHaveHediff>
+      </li>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>AnimalControlSublinkImplant</hediffDef>
+        <bodyPart>Brain</bodyPart>
+        <canUpgrade>true</canUpgrade>
+        <maxSeverity>3</maxSeverity>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="AnimalControlSublinkBase">
+    <defName>AnimalControlSublinkHigh</defName>
+    <label>animal control sublink (high)</label>
+    <description>A neural implant which gives a animanitor an additional control group.\n\nThis high-tier implant can increase the control group count up to 6.\n\nIt can be self-installed without surgery.\n\nThis implant can be installed up to 3 times to increase its effect.</description>
+    <costList>
+      <PowerfocusChip>1</PowerfocusChip>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+    </recipeMaker>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Implant high sublink</useLabel>
+        <userMustHaveHediff>AnimalLinkImplant</userMustHaveHediff>
+      </li>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>AnimalControlSublinkImplant</hediffDef>
+        <bodyPart>Brain</bodyPart>
+        <canUpgrade>true</canUpgrade>
+        <requiresExistingHediff>true</requiresExistingHediff>
+        <minSeverity>3</minSeverity>
+      </li>
+    </comps>
+  </ThingDef>
+
+
 </Defs>

@@ -7,6 +7,7 @@ namespace panda.AnimalLink
     public static class AnimalLinkDefOf
     {
         public static StatDef AnimalBandwidth;
+        public static StatDef AnimalControlGroups;
 
         static AnimalLinkDefOf()
         {

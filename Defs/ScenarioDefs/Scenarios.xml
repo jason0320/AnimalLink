@@ -51,7 +51,7 @@
           <project>GeneProcessor</project>
         </li>
 
-        <!-- Starting mechs -->
+        <!-- Starting animals -->
 		<li Class="ScenPart_StartingAnimal">
 			<def>StartingAnimal</def>
           <animalKind>Megaspider</animalKind>

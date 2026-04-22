@@ -62,13 +62,17 @@ namespace panda.AnimalLink
             get
             {
                 if (pawn == null) return 0;
-
-                // Read the stat from the pawn (which includes the implant + any apparel)
-                // Stats return floats, so we round it to an int.
                 return UnityEngine.Mathf.RoundToInt(pawn.GetStatValue(AnimalLinkDefOf.AnimalBandwidth));
             }
         }
-        public const int BaseControlGroups = 2;
+        public int BaseControlGroups
+        {
+            get
+            {
+                if (pawn == null) return 0;
+                return UnityEngine.Mathf.RoundToInt(pawn.GetStatValue(AnimalLinkDefOf.AnimalControlGroups));
+            }
+        }
 
         public int CountInGroup(int groupIndex)
         {
