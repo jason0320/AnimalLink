@@ -21,7 +21,7 @@ namespace panda.AnimalLink
         public int groupIndex;
         public bool selected;
         public bool drafted;
-        public bool autoRepair;
+        public bool autoTreat;
         public AnimalLinkWorkMode workMode = AnimalLinkWorkMode.Work;
         public Area allowedArea;
 
@@ -31,7 +31,7 @@ namespace panda.AnimalLink
             Scribe_Values.Look(ref groupIndex, "groupIndex", 0);
             Scribe_Values.Look(ref selected, "selected", false);
             Scribe_Values.Look(ref drafted, "drafted", false);
-            Scribe_Values.Look(ref autoRepair, "autoRepair", false);
+            Scribe_Values.Look(ref autoTreat, "autoTreat", false);
             Scribe_Values.Look(ref workMode, "workMode", AnimalLinkWorkMode.Work);
             Scribe_References.Look(ref allowedArea, "allowedArea");
         }
@@ -189,7 +189,7 @@ namespace panda.AnimalLink
                 groupIndex = 0,
                 selected = false,
                 drafted = false,
-                autoRepair = false,
+                autoTreat = false,
                 workMode = AnimalLinkWorkMode.Work,
                 allowedArea = null
             });
@@ -261,11 +261,11 @@ namespace panda.AnimalLink
                 if (e.selected) e.drafted = drafted;
         }
 
-        public void SetSelectedAutoRepair(bool autoRepair)
+        public void SetSelectedAutoTreat(bool autoTreat)
         {
             Cleanup();
             foreach (var e in linkedAnimals)
-                if (e.selected) e.autoRepair = autoRepair;
+                if (e.selected) e.autoTreat = autoTreat;
         }
 
         public void SetSelectedWorkMode(AnimalLinkWorkMode mode)
@@ -355,12 +355,24 @@ namespace panda.AnimalLink
                 if (e?.pawn == null || e.pawn.DestroyedOrNull() || !e.pawn.Spawned) continue;
                 if (e.pawn.Map != pawn.Map) continue;
 
-                if (e.autoRepair && e.pawn.health.summaryHealth.SummaryHealthPercent < 0.5f)
+                // AutoTreat behavior
+                if (e.autoTreat && e.pawn.health.HasHediffsNeedingTend())
                 {
-                    e.pawn.jobs?.TryTakeOrderedJob(
-                        JobMaker.MakeJob(JobDefOf.Goto, pawn),
-                        JobTag.Misc
-                    );
+                    // Ensure the animal waits in place to be treated
+                    if (e.pawn.jobs != null && (e.pawn.CurJob == null || e.pawn.CurJob.def != JobDefOf.Wait_MaintainPosture))
+                    {
+                        e.pawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(JobDefOf.Wait_MaintainPosture), JobTag.Misc);
+                    }
+
+                    // Assign the tend job to the overseer pawn if they are capable and not already doing it
+                    if (pawn.Spawned && !pawn.Downed && !pawn.Dead && !pawn.Drafted)
+                    {
+                        if (pawn.jobs != null && (pawn.CurJob == null || pawn.CurJob.def != JobDefOf.TendPatient || pawn.CurJob.targetA.Thing != e.pawn))
+                        {
+                            Job tendJob = JobMaker.MakeJob(JobDefOf.TendPatient, e.pawn);
+                            pawn.jobs.TryTakeOrderedJob(tendJob, JobTag.Misc);
+                        }
+                    }
                     continue;
                 }
 

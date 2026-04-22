@@ -115,7 +115,7 @@ namespace panda.AnimalLink
             Label(ref cx, y, ColName,     "Name");
             Label(ref cx, y, ColHealth,   "Health");
             Label(ref cx, y, ColDraft,    "Draft");
-            Label(ref cx, y, ColRepair,   "Auto repair");
+            Label(ref cx, y, ColRepair,   "Auto treat");
             Label(ref cx, y, ColOverseer, "Overseer");
             Label(ref cx, y, ColGroup,    "Control group");
             Label(ref cx, y, ColWork,     "Work mode");
@@ -205,10 +205,10 @@ namespace panda.AnimalLink
             entry.drafted = drafted;
             cx += ColDraft;
 
-            // Auto-repair checkbox
-            bool repair = entry.autoRepair;
-            Widgets.Checkbox(cx + 20f, y + 8f, ref repair, 18f);
-            entry.autoRepair = repair;
+            // Auto-treat checkbox
+            bool autoTreat = entry.autoTreat;
+            Widgets.Checkbox(cx + 20f, y + 8f, ref autoTreat, 18f);
+            entry.autoTreat = autoTreat;
             cx += ColRepair;
 
             // Overseer
