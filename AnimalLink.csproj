@@ -60,9 +60,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimalLink.cs" />
-    <Compile Include="AnimalLinkTex.cs" />
-    <Compile Include="AnimalLinkUtility.cs" />
+    <Compile Include="CompProperties_AnimalLink.cs" />
+    <Compile Include="Gizmo_AnimalLink.cs" />
     <Compile Include="Init.cs" />
+    <Compile Include="JobDriver_UninstallAnimalLink.cs" />
+    <Compile Include="MainButtonWorker_AnimalLink.cs" />
+    <Compile Include="MainTabWindow_AnimalLink.cs" />
     <Compile Include="Patch_AnimanitorStartImplant.cs" />
     <Compile Include="Patch_Pawn_GetGizmos.cs" />
     <Compile Include="Patch_Pawn_GetInspectString.cs" />

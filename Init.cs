@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using Verse;
 
 namespace panda.AnimalLink
@@ -8,7 +8,7 @@ namespace panda.AnimalLink
     {
         static Init()
         {
-            new HarmonyLib.Harmony("panda.animallink").PatchAll();
+            new Harmony("panda.AnimalLink").PatchAll();
         }
     }
 }
