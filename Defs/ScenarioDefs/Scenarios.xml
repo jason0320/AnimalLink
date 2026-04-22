@@ -58,7 +58,8 @@
         </li>
 		<li Class="ScenPart_StartingAnimal">
 			<def>StartingAnimal</def>
-          <animalKind>Megasloth</animalKind>
+          <animalKind IfModNotActive="sarg.alphaanimals">Megasloth</animalKind>
+          <animalKind IfModActive="sarg.alphaanimals">AA_Gallatross</animalKind>
         </li>
 
         <!-- Player starting things -->
