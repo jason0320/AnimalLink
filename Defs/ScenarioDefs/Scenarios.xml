@@ -54,11 +54,11 @@
         <!-- Starting animals -->
 		<li Class="ScenPart_StartingAnimal">
 			<def>StartingAnimal</def>
-          <animalKind>Megaspider</animalKind>
+          <animalKind>Thrumbo</animalKind>
         </li>
 		<li Class="ScenPart_StartingAnimal">
 			<def>StartingAnimal</def>
-          <animalKind>Megascarab</animalKind>
+          <animalKind>Megasloth</animalKind>
         </li>
 
         <!-- Player starting things -->
@@ -94,7 +94,7 @@
         </li>
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
-          <thingDef>InsectJelly</thingDef>
+          <thingDef>ComponentSpacer</thingDef>
           <count>5</count>
         </li>
 
